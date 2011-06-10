@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0.rc2'
 gem 'thin'
+gem 'therubyracer-heroku', '0.8.1.pre3'
 
 # Asset template engines
 gem 'sass'
@@ -13,12 +14,11 @@ gem 'jquery-rails'
 
 group :production do
   gem 'pg'
-  gem 'therubyracer-heroku', '0.8.1.pre3'
 end
 
 group :test, :development do
   gem 'heroku'
-  gem 'therubyracer', '0.8.2'
+#  gem 'therubyracer', '0.8.2'
   gem 'sqlite3'
 end
 
