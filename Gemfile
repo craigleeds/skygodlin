@@ -3,8 +3,6 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0.rc2'
 gem 'thin'
 gem 'therubyracer-heroku', '0.8.1.pre3'
-
-# Asset template engines
 gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
@@ -18,7 +16,6 @@ end
 
 group :test, :development do
   gem 'heroku'
-#  gem 'therubyracer', '0.8.2'
   gem 'sqlite3'
 end
 
