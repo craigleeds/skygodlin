@@ -4,3 +4,8 @@
 <h1>Rails3-Subdomain-Devise</h1>
 <p><%= link_to "View List of Users", users_path %></p>
 
+<h3>Home</h3>
+<% @users.each do |user| %>
+  <p>User: <%=link_to user.name, user %> </p>
+<% end %>
+
