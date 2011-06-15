@@ -41,7 +41,7 @@ Skygodlin::Application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   ### ActionMailer Config
-  config.action_mailer.default_url_options = { :host => 'yourhost.com' }
+  config.action_mailer.default_url_options = { :host => 'skygodlin.com' }
 
   # Setup for production - deliveries, no errors raised
   config.action_mailer.delivery_method = :smtp

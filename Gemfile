@@ -19,7 +19,9 @@ group :test, :development do
   gem 'heroku'
   gem 'sqlite3'
   gem 'turn', :require => false
+  gem 'rspec-rails', '2.6.1'
   gem 'factory_girl_rails', '>= 1.1.beta1'
+  gem 'nokogiri', '1.4.4'
   gem 'cucumber-rails', '>= 0.5.2'
   gem 'capybara', '>= 1.0.0.rc1'
   gem 'database_cleaner', '>= 0.6.7'
