@@ -10,6 +10,8 @@ gem 'friendly_id', '3.3.0.alpha2'
 gem 'jquery-rails'
 gem 'haml'
 gem 'therubyracer-heroku', '0.8.1.pre3'
+gem 'compass', :git => 'git://github.com/chriseppstein/compass.git',
+               :branch => 'rails31'
 
 group :production do
   gem 'pg'
