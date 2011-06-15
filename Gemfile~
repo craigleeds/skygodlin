@@ -10,8 +10,7 @@ gem 'friendly_id', '3.3.0.alpha2'
 gem 'jquery-rails'
 gem 'haml'
 gem 'therubyracer-heroku', '0.8.1.pre3'
-gem 'compass', :git => 'git://github.com/chriseppstein/compass.git',
-               :branch => 'rails31'
+# gem 'compass', :git => 'git://github.com/chriseppstein/compass.git', :branch => 'rails31'
 
 group :production do
   gem 'pg'
@@ -27,5 +26,6 @@ group :test, :development do
   gem 'cucumber-rails', '>= 0.5.2'
   gem 'capybara', '>= 1.0.0.rc1'
   gem 'database_cleaner', '>= 0.6.7'
+  gem 'autotest-notification'
 end
 
