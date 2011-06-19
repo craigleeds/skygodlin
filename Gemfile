@@ -17,6 +17,12 @@ group :production do
 end
 
 group :test, :development do
+  gem 'rb-inotify'
+  gem 'libnotify'
+  gem 'guard-bundler'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
   gem 'heroku'
   gem 'sqlite3'
   gem 'turn', :require => false
