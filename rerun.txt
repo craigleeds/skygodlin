@@ -1,1 +1,1 @@
-features/authentication/registration.feature
+features/authentication/sign_up.feature features/authentication/sign_up.feature

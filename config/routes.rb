@@ -7,7 +7,6 @@ Skygodlin::Application.routes.draw do
 
   match '/' => 'home#index', :constraints => { :subdomain => 'www' }
   match '/' => 'sites#show', :constraints => { :subdomain => /.+/ }
-
   root :to => "home#index"
 
   # The priority is based upon order of creation:
