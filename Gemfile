@@ -9,6 +9,7 @@ gem 'devise', '>= 1.3.4'
 gem 'therubyracer-heroku', '0.8.1.pre3'
 
 group :test, :development do
+  gem 'launchy'
   gem 'sqlite3'
   gem 'rspec-rails', '>= 2.6.1'
   gem 'ruby-debug19', :require => 'ruby-debug'
