@@ -16,5 +16,9 @@ group :test, :development do
   gem 'cucumber-rails', '>= 0.5.2'
   gem 'capybara', '>= 1.0.0'
   gem 'database_cleaner', '>= 0.6.7'
+  gem 'rb-inotify'
+  gem 'libnotify'
+  gem 'guard'
+  gem 'guard-rspec'
 end
 
