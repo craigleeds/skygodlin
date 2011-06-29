@@ -22,5 +22,6 @@ group :test, :development do
   gem 'libnotify'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'guard-cucumber'
 end
 
