@@ -11,6 +11,7 @@ gem 'therubyracer-heroku', '0.8.1.pre3'
 group :test, :development do
   gem 'launchy'
   gem 'sqlite3'
+  gem 'spork', '0.9.0.rc8'
   gem 'rspec-rails', '>= 2.6.1'
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'factory_girl_rails', '>= 1.1.beta1'
