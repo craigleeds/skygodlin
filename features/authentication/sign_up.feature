@@ -10,7 +10,7 @@ Feature: Sign up
 
     Scenario: User signs up with valid data
       And I fill in the following:
-        | Name                  | Testy McUserton |
+        | Name                  | TestyMcUserton |
         | Email                 | user@test.com   |
         | Password              | please          |
         | Password confirmation | please          |
