@@ -23,7 +23,7 @@ group :test, :development do
   gem 'rb-inotify'
   gem 'libnotify'
   gem 'guard', '0.4.2'
-  # gem 'guard', :git => "git://github.com/guard/guard.git"
+#  gem 'guard', :git => "git://github.com/guard/guard.git"
   gem 'guard-rspec'
   gem 'guard-cucumber'
   gem 'autotest-notification'
