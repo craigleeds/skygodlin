@@ -7,8 +7,10 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'devise', '>= 1.3.4'
 gem 'therubyracer-heroku', '0.8.1.pre3'
+gem "friendly_id", "~> 3.3.0.alpha2"
 
 group :test, :development do
+  gem 'heroku'
   gem 'launchy'
   gem 'sqlite3'
   gem 'spork', '0.9.0.rc8'
