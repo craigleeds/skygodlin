@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :encryptable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
 
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
   # User model validations:
