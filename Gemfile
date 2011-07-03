@@ -22,7 +22,7 @@ group :test, :development do
   gem 'database_cleaner', '>= 0.6.7'
   gem 'rb-inotify'
   gem 'libnotify'
-  gem 'guard', '0.4.2'
+  gem 'guard', '0.5.0'
   gem 'guard-rspec'
   gem 'guard-cucumber'
   gem 'autotest-notification'

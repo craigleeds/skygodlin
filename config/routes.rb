@@ -1,12 +1,14 @@
 Skygodlin::Application.routes.draw do
 
-  root :to => "home#index"
-
   devise_for :users
 
-  resources :users, :only => :show
+  resources :users, :only => [:index, :show] do
+    resources :subdomains, :shallow => true
+  end
 
+  match '/' => 'sites#show', :constraints => { :subdomain => /.+/ }
 
+  root :to => "home#index"
 
 end
 
