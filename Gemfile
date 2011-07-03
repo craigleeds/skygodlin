@@ -7,7 +7,11 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'devise', ' 1.4.2'
 gem 'therubyracer-heroku', '0.8.1.pre3'
-gem "friendly_id", "~> 3.3.0.alpha2"
+gem 'friendly_id', '~> 3.3.0.alpha2'
+
+group :production do
+  gem 'pg'
+end
 
 group :test, :development do
   gem 'heroku'
