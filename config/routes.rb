@@ -10,5 +10,8 @@ Skygodlin::Application.routes.draw do
   match '/' => 'sites#show', :constraints => { :subdomain => /.+/ }
   root :to => "home#index"
 
+  match '/subdomains' => 'subdomains#index'
+
+
 end
 
