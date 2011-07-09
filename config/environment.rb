@@ -5,5 +5,5 @@ require File.expand_path('../application', __FILE__)
 Skygodlin::Application.initialize!
 
 # Heroku step 1 for adding Sendgrid -- http://devcenter.heroku.com/articles/smtp
-config.action_mailer.delivery_method = :smtp
+# config.action_mailer.delivery_method = :smtp
 
