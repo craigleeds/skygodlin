@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   include UrlHelper
   protect_from_forgery
-  before_filter :limit_subdomain_access
+#  before_filter :limit_subdomain_access
 
   protected
 
