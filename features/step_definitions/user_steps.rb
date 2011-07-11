@@ -3,10 +3,12 @@ Given /^no user exists with an email of "(.*)"$/ do |email|
 end
 
 Given /^I am a user named "([^"]*)" with an email "([^"]*)" and password "([^"]*)"$/ do |name, email, password|
-  User.new(:name => name,
-            :email => email,
-            :password => password,
-            :password_confirmation => password).save!
+  user = User.new(
+    :name => name,
+    :email => email,
+    :password => password,
+    :password_confirmation => password
+  ).save!
 end
 
 Given /^I am a new, authenticated user$/ do
@@ -32,7 +34,7 @@ Given /^I am signed up as "(.*)\/(.*)"$/ do |email, password|
   And %{I fill in "Password" with "#{password}"}
   And %{I fill in "Password confirmation" with "#{password}"}
   And %{I press "Sign up"}
-  Then %{I should see "You have signed up successfully. If enabled, a confirmation was sent to your e-mail."}
+  Then %{I should see "Welcome! You have signed up successfully."}
   And %{I am logout}
 end
 

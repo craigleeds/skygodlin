@@ -5,6 +5,7 @@ Feature: Edit User
 
   Background:
     Given I am a user named "foo" with an email "user@test.com" and password "please"
+    And I am confirmed
     And I sign in as "user@test.com/please"
 
   Scenario: I sign in and edit my account
