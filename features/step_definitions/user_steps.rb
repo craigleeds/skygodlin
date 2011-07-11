@@ -67,5 +67,6 @@ Then /^I should be signed out$/ do
 end
 
 Given /^I am not logged in$/ do
-  visit('/users/sign_out') # ensure that at least
+  visit('/users/sign_out') # :method => :delete # ensure that at least
 end
+

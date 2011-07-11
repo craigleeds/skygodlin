@@ -3,8 +3,10 @@ Feature: Sign in
   As a user
   I want to sign in
 
-    Scenario: User is not signed up
+    Background:
       Given I am not logged in
+
+    Scenario: Unregistered user attempts to sign up
       And no user exists with an email of "user@test.com"
       When I go to the sign in page
       And I sign in as "user@test.com/please"
@@ -12,8 +14,7 @@ Feature: Sign in
       And I go to the home page
       And I should be signed out
 
-    Scenario: User enters wrong password
-      Given I am not logged in
+    Scenario: Registered user enters wrong password
       And I am a user named "foo" with an email "user@test.com" and password "please"
       When I go to the sign in page
       And I sign in as "user@test.com/wrongpassword"
@@ -21,8 +22,7 @@ Feature: Sign in
       And I go to the home page
       And I should be signed out
 
-    Scenario: User signs in successfully with email
-      Given I am not logged in
+    Scenario: Registered user signs in
       And I am a user named "foo" with an email "user@test.com" and password "please"
       When I go to the sign in page
       And I sign in as "user@test.com/please"

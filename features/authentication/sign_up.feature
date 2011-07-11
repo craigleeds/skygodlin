@@ -1,15 +1,17 @@
 Feature: Sign up
   In order to get access to protected sections of the site
-  As a user
-  I want to be able to sign up
+  As an unregistered user
+  I want to sign up
 
     Background:
       Given I am not logged in
       And I am on the home page
-      And I go to the sign up page
+      And I follow the "Sign up" link
+      Then show me the page
+      And no user exists with an email of "user@test.com"
 
     @wip
-    Scenario: User signs up with valid data
+    Scenario: Unregisterd user signs up with valid data
       And I fill in the following:
         | Name                  | Testy McUserton |
         | Email                 | user@test.com   |
@@ -18,7 +20,7 @@ Feature: Sign up
       And I press "Sign up"
       Then I should see "Welcome! You have signed up successfully."
 
-    Scenario: User signs up with invalid email
+    Scenario: Unregistered user signs up with invalid email
       And I fill in the following:
         | Name                  | Testy McUserton |
         | Email                 | invalidemail    |
