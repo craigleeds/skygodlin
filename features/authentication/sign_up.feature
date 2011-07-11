@@ -7,7 +7,6 @@ Feature: Sign up
       Given I am not logged in
       And I am on the home page
       And I follow the "Sign up" link
-      Then show me the page
       And no user exists with an email of "user@test.com"
 
     @wip
