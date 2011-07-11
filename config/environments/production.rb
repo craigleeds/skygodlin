@@ -20,9 +20,9 @@ Skygodlin::Application.configure do
   :address        => "smtp.sendgrid.net",
   :port           => "25",
   :authentication => :plain,
-  :user_name      => ENV['app588483@heroku.com'],
-  :password       => ENV['c6f9e8b604f68300e1'],
-  :domain         => ENV['www.skygodlin.com']
+  :user_name      => ENV['SENDGRID_USERNAME'],
+  :password       => ENV['SENDGRID_PASSWORD'],
+  :domain         => ENV['SENDGRID_DOMAIN']
 }
 
   # Disable Rails's static asset server (Apache or nginx will
