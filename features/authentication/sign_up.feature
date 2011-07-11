@@ -9,7 +9,6 @@ Feature: Sign up
       And I follow the "Sign up" link
       And no user exists with an email of "user@test.com"
 
-    @wip
     Scenario: Unregisterd user signs up with valid data
       And I fill in the following:
         | Name                  | Testy McUserton |
@@ -17,7 +16,7 @@ Feature: Sign up
         | Password              | please          |
         | Password confirmation | please          |
       And I press "Sign up"
-      Then I should see "Welcome! You have signed up successfully."
+      Then I should see "You have signed up successfully."
 
     Scenario: Unregistered user signs up with invalid email
       And I fill in the following:
