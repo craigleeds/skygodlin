@@ -10,6 +10,7 @@ gem 'therubyracer-heroku', '0.8.1.pre3'
 gem 'friendly_id', '~> 3.3.0.alpha2'
 gem 'thin'
 gem 'pg'
+gem 'haml'
 
 group :test, :development do
   gem 'heroku'
