@@ -16,7 +16,7 @@
   %p
     = f.label :password_confirmation
     %br/
-    = f.password_field :password_confirmation
+    = f.password_field :password_confirmation, :value => :new_random_password
   %p
     = f.submit "Sign up"
 = render :partial => "devise/shared/links"
