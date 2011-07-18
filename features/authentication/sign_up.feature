@@ -9,6 +9,17 @@ Feature: Sign up
       And I follow the "Sign up" link
       And no user exists with an email of "user@test.com"
 
+      @wip
+      Scenario: Unregistered user signs up with just email
+      And I fill in the following:
+        | Name                  |                 |
+        | Email                 | user@test.com   |
+        | Password              | please          |
+        | Password confirmation | please          |
+      And I press "Sign up"
+      Then I should see "You have signed up successfully."
+
+
     Scenario: Unregisterd user signs up with valid data
       And I fill in the following:
         | Name                  | Testy McUserton |
@@ -27,14 +38,14 @@ Feature: Sign up
       And I press "Sign up"
       Then I should see "Email is invalid"
 
-    Scenario: User signs up without password
-      And I fill in the following:
-        | Name                  | Testy McUserton |
-        | Email                 | user@test.com   |
-        | Password              |                 |
-        | Password confirmation | please          |
-      And I press "Sign up"
-      Then I should see "Password can't be blank"
+#    Scenario: User signs up without password
+#      And I fill in the following:
+#        | Name                  | Testy McUserton |
+#        | Email                 | user@test.com   |
+#        | Password              |                 |
+#        | Password confirmation | please          |
+#     And I press "Sign up"
+#     Then I should see "Password can't be blank"
 
     Scenario: User signs up without password confirmation
       And I fill in the following:
@@ -50,7 +61,7 @@ Feature: Sign up
         | Name                  | Testy McUserton |
         | Email                 | user@test.com   |
         | Password              | please          |
-        | Password confirmation | please1         |
+        | Password confirmation | pleeeeeeese     |
       And I press "Sign up"
       Then I should see "Password doesn't match confirmation"
 
