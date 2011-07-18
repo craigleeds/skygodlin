@@ -17,7 +17,10 @@ Feature: Sign up
         | Password              | please          |
         | Password confirmation | please          |
       And I press "Sign up"
+      Then I should see "Name can't be blank"
+      And I press "Sign up"
       Then I should see "You have signed up successfully."
+
 
 
     Scenario: Unregisterd user signs up with valid data
