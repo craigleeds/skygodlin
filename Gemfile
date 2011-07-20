@@ -17,7 +17,7 @@ group :test, :development do
   gem 'heroku'
   gem 'launchy'
   gem 'sqlite3'
-  gem 'spork', '0.9.0.rc8'
+  gem 'spork', '0.9.0.rc9'
   gem 'rspec-rails', '>= 2.6.1'
   gem 'factory_girl_rails', '>= 1.1.beta1'
   gem 'cucumber-rails', '1.0.1'
