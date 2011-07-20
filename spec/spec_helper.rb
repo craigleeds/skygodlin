@@ -1,10 +1,11 @@
 require 'rubygems'
 require 'spork'
+require 'email_spec'
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
-  # need to restart spork for it take effect.
+  # need to restart spork for it take effect
 
 end
 
@@ -55,6 +56,8 @@ require 'rspec/rails'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
+  config.include(EmailSpec::Helpers)
+  config.include(EmailSpec::Matchers)
   # == Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:

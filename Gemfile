@@ -13,14 +13,15 @@ gem 'pg'
 gem 'haml'
 
 group :test, :development do
+  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'heroku'
   gem 'launchy'
   gem 'sqlite3'
   gem 'spork', '0.9.0.rc8'
   gem 'rspec-rails', '>= 2.6.1'
-  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'factory_girl_rails', '>= 1.1.beta1'
-  gem 'cucumber-rails', '>= 0.5.2'
+  gem 'cucumber-rails', '1.0.1'
+  gem 'email_spec'
   gem 'capybara', '>= 1.0.0'
   gem 'database_cleaner', '>= 0.6.7'
   gem 'rb-inotify'
@@ -28,6 +29,7 @@ group :test, :development do
   gem 'guard', '0.5.0'
   gem 'guard-rspec'
   gem 'guard-cucumber'
+  gem 'guard-spork'
   gem 'autotest-notification'
 end
 

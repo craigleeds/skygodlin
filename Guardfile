@@ -1,3 +1,4 @@
+
 group 'rspec' do
   guard 'rspec', :version => 2 do
     watch(%r{^spec/.+_spec\.rb$})
@@ -19,13 +20,10 @@ group 'rspec' do
   end
 end
 
-group 'cucumber' do
+guard 'cucumber' do
+  watch(%r{^features/.+\.feature$})
+  watch(%r{^features/support/.+$})          { 'features' }
+  watch(%r{^features/step_definitions/(.+)_steps\.rb$}) { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'features' }
 
-  guard 'cucumber' do
-    watch(%r{^features/.+\.feature$})
-    watch(%r{^features/support/.+$})          { 'features' }
-    watch(%r{^features/step_definitions/(.+)_steps\.rb$}) { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'features' }
-
-  end
 end
 

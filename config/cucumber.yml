@@ -1,3 +1,4 @@
+guard: --format progress --strict --tags ~@wip
 
 <%
 rerun = File.file?('rerun.txt') ? IO.read('rerun.txt') : ""

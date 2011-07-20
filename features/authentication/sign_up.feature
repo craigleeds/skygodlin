@@ -4,67 +4,35 @@ Feature: Sign up
   I want to sign up
 
     Background:
-      Given I am not logged in
+      Given no emails have been sent
+      And I am not logged in
       And I am on the home page
       And I follow the "Sign up" link
-      And no user exists with an email of "user@test.com"
+      And no user exists with an email of "sarahsilverman@test.com"
 
-      @wip
-      Scenario: Unregistered user signs up with just email
+    @wip
+    Scenario: Unregistered user signs up with valid email
       And I fill in the following:
-        | Name                  |                 |
-        | Email                 | user@test.com   |
-        | Password              | please          |
-        | Password confirmation | please          |
-      And I press "Sign up"
-      Then I should see "Name can't be blank"
+        | Email                 | SarahSilverman@test.com   |
       And I press "Sign up"
       Then I should see "You have signed up successfully."
-
-
-
-    Scenario: Unregisterd user signs up with valid data
-      And I fill in the following:
-        | Name                  | Testy McUserton |
-        | Email                 | user@test.com   |
-        | Password              | please          |
-        | Password confirmation | please          |
-      And I press "Sign up"
-      Then I should see "You have signed up successfully."
+      And "sarahsilverman@test.com" should have 1 email
+      When I open the email
+      Then I should see "Confirmation instructions" in the email subject
+      And I should see "sarahsilverman" in the email body
+      And I should see "confirm" in the email body
+      When I follow "Confirm my account" in the email
+      Then I should see "Your account was successfully confirmed."
 
     Scenario: Unregistered user signs up with invalid email
       And I fill in the following:
-        | Name                  | Testy McUserton |
         | Email                 | invalidemail    |
-        | Password              | please          |
-        | Password confirmation | please          |
       And I press "Sign up"
       Then I should see "Email is invalid"
 
-#    Scenario: User signs up without password
-#      And I fill in the following:
-#        | Name                  | Testy McUserton |
-#        | Email                 | user@test.com   |
-#        | Password              |                 |
-#        | Password confirmation | please          |
-#     And I press "Sign up"
-#     Then I should see "Password can't be blank"
-
-    Scenario: User signs up without password confirmation
+    Scenario: Unregistered user signs up with no email
       And I fill in the following:
-        | Name                  | Testy McUserton |
-        | Email                 | user@test.com   |
-        | Password              | please          |
-        | Password confirmation |                 |
+        | Email                 |                 |
       And I press "Sign up"
-      Then I should see "Password doesn't match confirmation"
-
-    Scenario: User signs up with mismatched password and confirmation
-      And I fill in the following:
-        | Name                  | Testy McUserton |
-        | Email                 | user@test.com   |
-        | Password              | please          |
-        | Password confirmation | pleeeeeeese     |
-      And I press "Sign up"
-      Then I should see "Password doesn't match confirmation"
+      Then I should see "Email is invalid"
 
